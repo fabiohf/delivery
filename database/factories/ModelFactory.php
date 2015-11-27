@@ -30,6 +30,17 @@ $factory->define(Delivery\Models\Produto::class, function (Faker\Generator $fake
     return [
         'nome' => $faker->word,
         'descricao' => $faker->sentence,
-        'preco' => $faker->numberBetween(10,50)
+        'preco' => $faker->numberBetween(10, 50)
+    ];
+});
+
+$factory->define(Delivery\Models\Cliente::class, function (Faker\Generator $faker) {
+    return [
+        'telefone' => $faker->phoneNumber,
+        'endereco' => $faker->address,
+        'cidade' => $faker->city,
+        'cidade' => $faker->city,
+        'estado' => $faker->state,
+        'cep' => $faker->postcode
     ];
 });

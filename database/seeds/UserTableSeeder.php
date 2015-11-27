@@ -1,5 +1,6 @@
 <?php
 
+use Delivery\Models\Cliente;
 use Delivery\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -12,6 +13,8 @@ class UserTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(User::class, 10)->create();
+        factory(User::class, 10)->create()->each(function ($usuario) {
+            $usuario->cliente()->save(factory(Cliente::class)->make());
+        });
     }
 }
