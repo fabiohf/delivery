@@ -14,9 +14,7 @@ class CategoriaTableSeeder extends Seeder
     public function run()
     {
         factory(Categoria::class, 10)->create()->each(function($categoria) {
-            for ($i=0; $i<=5; $i++) {
-                $categoria->produtos()->save(factory(Produto::class)->make());
-            }
+            $categoria->produtos()->saveMany(factory(Produto::class)->times(5)->make());
         });
     }
 }
