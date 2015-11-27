@@ -1,6 +1,7 @@
 <?php
 
 use Delivery\Models\Categoria;
+use Delivery\Models\Produto;
 use Illuminate\Database\Seeder;
 
 class CategoriaTableSeeder extends Seeder
@@ -12,6 +13,10 @@ class CategoriaTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Categoria::class, 10)->create();
+        factory(Categoria::class, 10)->create()->each(function($categoria) {
+            for ($i=0; $i<=5; $i++) {
+                $categoria->produtos()->save(factory(Produto::class)->make());
+            }
+        });
     }
 }

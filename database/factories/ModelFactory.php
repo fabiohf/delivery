@@ -25,3 +25,11 @@ $factory->define(Delivery\Models\Categoria::class, function (Faker\Generator $fa
         'nome' => $faker->word
     ];
 });
+
+$factory->define(Delivery\Models\Produto::class, function (Faker\Generator $faker) {
+    return [
+        'nome' => $faker->word,
+        'descricao' => $faker->sentence,
+        'preco' => $faker->numberBetween(10,50)
+    ];
+});
