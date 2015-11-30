@@ -138,10 +138,14 @@ return [
         Illuminate\View\ViewServiceProvider::class,
 
         /*
+         * Providers de Terceiros...
+         */
+        Prettus\Repository\Providers\RepositoryServiceProvider::class,
+        Bestmomo\Scafold\ScafoldServiceProvider::class,
+
+        /*
          * Application Service Providers...
          */
-
-        Prettus\Repository\Providers\RepositoryServiceProvider::class,
         Delivery\Providers\AppServiceProvider::class,
         Delivery\Providers\AuthServiceProvider::class,
         Delivery\Providers\EventServiceProvider::class,
