@@ -3,9 +3,13 @@
 namespace Delivery\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Prettus\Repository\Contracts\Transformable;
+use Prettus\Repository\Traits\TransformableTrait;
 
-class Cliente extends Model
+class Cliente extends Model implements Transformable
 {
+    use TransformableTrait;
+
     // Definindo nome da tabela
     protected $table = "clientes";
 
@@ -23,4 +27,5 @@ class Cliente extends Model
     {
         return $this->hasOne(User::class);
     }
+
 }

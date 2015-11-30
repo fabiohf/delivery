@@ -3,9 +3,13 @@
 namespace Delivery\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Prettus\Repository\Contracts\Transformable;
+use Prettus\Repository\Traits\TransformableTrait;
 
-class PedidoItem extends Model
+class PedidoItem extends Model implements Transformable
 {
+    use TransformableTrait;
+
     // Definindo nome da tabela
     protected $table = "pedidos_item";
 
