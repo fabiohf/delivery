@@ -9,7 +9,7 @@
         <div class="panel panel-default">
             <div class="panel-heading text-right">
                 <div class="btn-group">
-                    <a href="#" class="btn btn-default">Nova Mercadoria</a>
+                    <a href="{{ route('admin.categorias.adicionar') }}" class="btn btn-primary">Nova Categoria</a>
                 </div>
             </div>
             <div class="panel-body">

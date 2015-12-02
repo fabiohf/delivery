@@ -12,4 +12,9 @@ class CategoriasController extends Controller
         $categorias = $repository->paginate(5);
         return view('admin.categorias.index', compact('categorias'));
     }
+
+    public function adicionar()
+    {
+        return view('admin.categorias.adiciona');
+    }
 }

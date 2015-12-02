@@ -11,5 +11,6 @@
 |
 */
 
-Route::get('admin/categorias','CategoriasController@index');
+Route::get('admin/categorias',['as'=>'admin.categorias','uses'=>'CategoriasController@index']);
+Route::get('admin/categorias/adicionar',['as'=>'admin.categorias.adicionar','uses'=>'CategoriasController@adicionar']);
 
