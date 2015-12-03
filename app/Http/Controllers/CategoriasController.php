@@ -13,8 +13,13 @@ class CategoriasController extends Controller
         return view('admin.categorias.index', compact('categorias'));
     }
 
-    public function adicionar()
+    public function novo()
     {
-        return view('admin.categorias.adiciona');
+        return view('admin.categorias.novo');
+    }
+
+    public function gravar()
+    {
+
     }
 }

@@ -13,6 +13,16 @@
                 </div>
             </div>
             <div class="panel-body">
+                {!!  Form::open(['route'=>'admin.categorias.gravar']) !!}
+                <div class="form-group">
+                    {!! Form::label('Name', 'Nome:') !!}
+                    {!! Form::text('name', null, ['class'=>'form-control']) !!}
+                </div>
+
+                <div class="form-group">
+                    {!! Form::submit('Gravar', ['class'=>'btn btn-primary']) !!}
+                </div>
+                {!!  Form::close() !!}
             </div>
         </div>
     </div>
