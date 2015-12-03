@@ -15,8 +15,8 @@
             <div class="panel-body">
                 {!!  Form::open(['route'=>'admin.categorias.gravar']) !!}
                 <div class="form-group">
-                    {!! Form::label('Name', 'Nome:') !!}
-                    {!! Form::text('name', null, ['class'=>'form-control']) !!}
+                    {!! Form::label('Nome', 'Nome:') !!}
+                    {!! Form::text('nome', null, ['class'=>'form-control']) !!}
                 </div>
 
                 <div class="form-group">
