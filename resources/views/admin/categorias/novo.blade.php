@@ -19,7 +19,7 @@
         @endif
 
         <div class="panel panel-default">
-            <div class="panel-heading text-right">
+            <div class="panel-heading">
                 <div class="btn-group">
                     <a href="{{ route('admin.categorias') }}" class="btn btn-primary">Voltar</a>
                 </div>
