@@ -2,7 +2,7 @@
 
 namespace Delivery\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Delivery\Http\Requests\AdminCategoriasRequest;
 use Delivery\Repositories\CategoriaRepository;
 
 class CategoriasController extends Controller
@@ -25,7 +25,7 @@ class CategoriasController extends Controller
         return view('admin.categorias.novo');
     }
 
-    public function gravar(Request $request)
+    public function gravar(AdminCategoriasRequest $request)
     {
         $data = $request->all();
         $this->repository->create($data);

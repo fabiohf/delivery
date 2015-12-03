@@ -6,6 +6,18 @@
         <div class="page-header">
             <h3>Nova Categoria</h3>
         </div>
+
+        @if($errors->any())
+            <div class="alert alert-danger fade in">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <ul>
+                    @foreach($errors->all() as $erro)
+                        <li>{{ $erro }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
         <div class="panel panel-default">
             <div class="panel-heading text-right">
                 <div class="btn-group">
