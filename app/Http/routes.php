@@ -13,5 +13,5 @@
 
 Route::get('admin/categorias', ['as' => 'admin.categorias', 'uses' => 'CategoriasController@index']);
 Route::get('admin/categorias/novo', ['as' => 'admin.categorias.novo', 'uses' => 'CategoriasController@novo']);
-Route::post('admin/categorias/gravar', ['as' => 'admin.categorias.gravar', 'uses' => 'CategoriasController@gravar']);
+Route::post('admin/categorias/criar', ['as' => 'admin.categorias.criar', 'uses' => 'CategoriasController@criar']);
 

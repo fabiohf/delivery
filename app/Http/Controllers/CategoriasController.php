@@ -25,7 +25,7 @@ class CategoriasController extends Controller
         return view('admin.categorias.novo');
     }
 
-    public function gravar(AdminCategoriasRequest $request)
+    public function criar(AdminCategoriasRequest $request)
     {
         $data = $request->all();
         $this->repository->create($data);
