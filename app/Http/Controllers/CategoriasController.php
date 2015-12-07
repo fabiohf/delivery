@@ -27,8 +27,21 @@ class CategoriasController extends Controller
 
     public function criar(AdminCategoriasRequest $request)
     {
-        $data = $request->all();
-        $this->repository->create($data);
+        $dados = $request->all();
+        $this->repository->create($dados);
+        return redirect()->route('admin.categorias');
+    }
+
+    public function editar($id)
+    {
+        $categoria = $this->repository->find($id);
+        return view('admin.categorias.editar', compact('categoria'));
+    }
+
+    public function alterar(AdminCategoriasRequest $request, $id)
+    {
+        $dados = $request->all();
+        $this->repository->update($dados, $id);
         return redirect()->route('admin.categorias');
     }
 }

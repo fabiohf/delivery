@@ -25,7 +25,11 @@
                         <tr>
                             <th>{{ $categoria->id }}</th>
                             <th>{{ $categoria->nome }}</th>
-                            <th></th>
+                            <th>
+                                <a href="{{route('admin.categorias.editar', ['id'=>$categoria->id])}}" class="btn btn-default btn-sm">
+                                    Editar
+                                </a>
+                            </th>
                         </tr>
                     @endforeach
                 </table>
