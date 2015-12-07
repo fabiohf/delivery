@@ -26,10 +26,8 @@
             </div>
             <div class="panel-body">
                 {!!  Form::open(['route'=>'admin.categorias.criar']) !!}
-                <div class="form-group">
-                    {!! Form::label('Nome', 'Nome:') !!}
-                    {!! Form::text('nome', null, ['class'=>'form-control']) !!}
-                </div>
+
+                @include('admin.categorias._form')
 
                 <div class="form-group">
                     {!! Form::submit('Gravar', ['class'=>'btn btn-primary']) !!}
